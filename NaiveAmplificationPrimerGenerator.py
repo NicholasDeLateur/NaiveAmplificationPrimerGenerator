@@ -75,10 +75,11 @@ Sequences_of_Interest = []
 Primers = []
 
 # Retrieve sequences to be amplified
-filenameRead = os.path.normpath("C:/Users/Weiss Lab/Desktop/testExcelforNaiveAmplificationPrimerGenerator.xlsx")
+filenameRead = os.path.normpath("C:/Users/NDeLateur/Desktop/testExcelforNaiveAmplificationPrimerGenerator.xlsx")
 # NOTE the forward slashes above!!!!
 workbookRead = xlrd.open_workbook(filenameRead)
 worksheetRead = workbookRead.sheet_by_index(0)
+
 for i in range(1, column_len(worksheetRead,0)):
     Sequences_of_Interest.append(worksheetRead.row_values(i))
 
